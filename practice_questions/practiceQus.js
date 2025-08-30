@@ -133,27 +133,27 @@ else {
 
 //? question 2: Use `switch` to display the name of the day when given a number 1–7.
 
-// let day = parseInt(prompt("enter the day number [1-7]: "));
+let day = parseInt(prompt("enter the day number [1-7]: "));
 
-// switch(day) {
-//     case 1 : console.log(`${day} is Sunday`);
-//     break;
-//     case 2 : console.log(`${day} is Monday`);
-//     break;
-//     case 3 : console.log(`${day} is Tuesday`);
-//     break;
-//     case 4 : console.log(`${day} is Wednesday`);
-//     break;
-//     case 5 : console.log(`${day} is Thursday`);
-//     break;
-//     case 6 : console.log(`${day} is Friday`);
-//     break;
-//     case 7 : console.log(`${day} is Saturday`);
-//     break;
+switch(day) {
+    case 1 : console.log(`${day} is Sunday`);
+    break;
+    case 2 : console.log(`${day} is Monday`);
+    break;
+    case 3 : console.log(`${day} is Tuesday`);
+    break;
+    case 4 : console.log(`${day} is Wednesday`);
+    break;
+    case 5 : console.log(`${day} is Thursday`);
+    break;
+    case 6 : console.log(`${day} is Friday`);
+    break;
+    case 7 : console.log(`${day} is Saturday`);
+    break;
 
-//     default: console.log(`${day} is invalid day number`);
+    default: console.log(`${day} is invalid day number`);
 
-// }
+}
 
 //! HARD...
 
@@ -176,68 +176,68 @@ else {
 
 //? Question 2: Implement a simple ATM withdrawal program (check balance before withdrawal).
 
-// let accountno = 11780;
-// let pin = 1209;
-// let balance = 40000.00
-// let tries = 3;
-// let isLogin = false;
-// let isWithdraw = 0;
-// let withdraw_amount = 0;
+let accountno = 11780;
+let pin = 1209;
+let balance = 40000.00
+let tries = 3;
+let isLogin = false;
+let isWithdraw = 0;
+let withdraw_amount = 0;
 
-// while (true) {
-//     useraccno = parseInt(prompt("enter your account no: "));
-//     userpin = parseInt(prompt(`enter your Pin: `));
+while (true) {
+    useraccno = parseInt(prompt("enter your account no: "));
+    userpin = parseInt(prompt(`enter your Pin: `));
 
-//     if (useraccno != accountno) {
-//     console.log("No account found!");
-//     break;
-//    }
-//    else if(useraccno == accountno && userpin != pin) {
-//         tries--;
-//        while(tries > 0){
-//         userpin = prompt(`invalid pin, please try again: ${tries} attempts left: `)
-//         if(userpin == pin) {
-//             isLogin = true;
-//             break;
-//         }
-//         else {
-//             tries--;
-//         }
-//     }
+    if (useraccno != accountno) {
+    console.log("No account found!");
+    break;
+   }
+   else if(useraccno == accountno && userpin != pin) {
+        tries--;
+       while(tries > 0){
+        userpin = prompt(`invalid pin, please try again: ${tries} attempts left: `)
+        if(userpin == pin) {
+            isLogin = true;
+            break;
+        }
+        else {
+            tries--;
+        }
+    }
         
-//         if(isLogin == false) {
-//             console.log("you have entered wrong pin 3 times and your card has been blocked, please visit your nearest bank");
-//             break;
-//         }
-// }
+        if(isLogin == false) {
+            console.log("you have entered wrong pin 3 times and your card has been blocked, please visit your nearest bank");
+            break;
+        }
+}
 
-//    if ((useraccno == accountno && userpin == pin) || (useraccno == accountno && isLogin == true)){
-//         console.log("Login successful!");
-//         console.log(`your balance is ${balance}`);
-//         isWithdraw = parseInt(prompt("Do you want to withdraw your money? 1 for yes and 0 for No"));
+   if ((useraccno == accountno && userpin == pin) || (useraccno == accountno && isLogin == true)){
+        console.log("Login successful!");
+        console.log(`your balance is ${balance}`);
+        isWithdraw = parseInt(prompt("Do you want to withdraw your money? 1 for yes and 0 for No"));
 
-//         if(isWithdraw == 1) {
-//             withdraw_amount = parseInt(prompt("Enter the amount you want to withdraw: "));
+        if(isWithdraw == 1) {
+            withdraw_amount = parseInt(prompt("Enter the amount you want to withdraw: "));
 
-//             if(withdraw_amount <= balance) {
-//                 console.log(`your withdrawal of ${withdraw_amount} is successful`);
-//                 balance-= withdraw_amount;
-//                 console.log(`your remaining balance is ${balance}`);
-//                 break;
-//             }
-//             else {
-//                 console.log("Insufficient balance!");
-//                 break;
-//             }
-//         }
-//         else {
-//             console.log("Logging out...");
-//             break;
-//         }
+            if(withdraw_amount <= balance) {
+                console.log(`your withdrawal of ${withdraw_amount} is successful`);
+                balance-= withdraw_amount;
+                console.log(`your remaining balance is ${balance}`);
+                break;
+            }
+            else {
+                console.log("Insufficient balance!");
+                break;
+            }
+        }
+        else {
+            console.log("Logging out...");
+            break;
+        }
 
 
-//     }
-// }
+    }
+}
 
 //? question 3: Write a program that categorizes temperature: Cold (<20), Warm (20–30), Hot (>30).
 
@@ -256,41 +256,41 @@ else {
     console.log("ERROR");
 }
 
-//? Question 4:  Implement a mini calculator using `switch` (`+`, `-`, `*`, `/`).
+? Question 4:  Implement a mini calculator using `switch` (`+`, `-`, `*`, `/`).
 
-// let number1 = 0, operator = "0", number2 = 0;
-// let choice = 0;
-// while (true) {
-//     choice = parseInt(prompt("Enter your choice(1 for continue, 0 for exit): "));
-//     if (choice == 0) {
-//         break;
-//     }
-//     number1 = parseInt(prompt("Enter your first number: "));
-//     operator = prompt("choose the operation you want to perform(+,-,*,/,%,**): ");
-//     number2 = parseInt(prompt("Enter your 2nd number: "));
+let number1 = 0, operator = "0", number2 = 0;
+let choice = 0;
+while (true) {
+    choice = parseInt(prompt("Enter your choice(1 for continue, 0 for exit): "));
+    if (choice == 0) {
+        break;
+    }
+    number1 = parseInt(prompt("Enter your first number: "));
+    operator = prompt("choose the operation you want to perform(+,-,*,/,%,**): ");
+    number2 = parseInt(prompt("Enter your 2nd number: "));
 
-//     switch(operator) {
-//         case "+" : console.log(`${number1} + ${number2} = ${number1+number2}`);
-//         break;
+    switch(operator) {
+        case "+" : console.log(`${number1} + ${number2} = ${number1+number2}`);
+        break;
 
-//         case "-" : console.log(`${number1} - ${number2} = ${number1-number2}`);
-//         break;
+        case "-" : console.log(`${number1} - ${number2} = ${number1-number2}`);
+        break;
 
-//         case "*" : console.log(`${number1} * ${number2} = ${number1*number2}`);
-//         break;
+        case "*" : console.log(`${number1} * ${number2} = ${number1*number2}`);
+        break;
 
-//         case "/" : console.log(`${number1} / ${number2} = ${number1/number2}`);
-//         break;
+        case "/" : console.log(`${number1} / ${number2} = ${number1/number2}`);
+        break;
 
-//         case "%" : console.log(`${number1} % ${number2} = ${number1%number2}`);
-//         break;
+        case "%" : console.log(`${number1} % ${number2} = ${number1%number2}`);
+        break;
 
-//         case "**" : console.log(`${number1} ** ${number2} = ${number1**number2}`);
-//         break;
+        case "**" : console.log(`${number1} ** ${number2} = ${number1**number2}`);
+        break;
 
-//         default: console.log("Invalid operator!");
-//     }
-// }
+        default: console.log("Invalid operator!");
+    }
+}
 
 //* LOOPS...
 
